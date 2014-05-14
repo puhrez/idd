@@ -1,4 +1,4 @@
-Institute of Design and Development
+Institute of Development and Design
 ===================================
 Background
 ----------
