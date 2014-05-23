@@ -20,7 +20,6 @@
         event.preventDefault();
         $('html, body').animate({scrollTop: 0}, 750);
         history.pushState(null, null, "index.html");
-        $container.fadeOut("slow");
     });
       if (is_touch_device) {
         $(".secondNav li").on("click", function() {
