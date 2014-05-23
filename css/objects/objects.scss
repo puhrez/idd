@@ -60,8 +60,27 @@ footer {
   }
 }
 p.percentages {
-  text-decoration: none;
   text-align: right;
   font-size: 2em;
-  font-style: bold;
+  font-weight: bold;
+  margin-right: 30%;
+}
+.container nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+.mainNav {
+      transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+}
+.moveUp {
+    transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  margin-top: -250%;
 }

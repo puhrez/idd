@@ -1,3 +1,6 @@
+@media (min-width: 22.5em) {
+  .moveUp {
+    margin-top: -158%; } }
 @media (min-width: 62em), (orientation: landscape) {
   .logo {
     font-size: 1.5em; }
@@ -5,11 +8,22 @@
       display: none; }
 
   nav {
+    margin-top: 20%;
     background-color: black; }
     nav a {
       font-size: 1.5em; }
 
+  nav > ul > li {
+    display: inline-block;
+    position: relative; }
+
   nav li {
     background-color: white;
-    display: inline-block;
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+
+  .mainNav li {
+    padding-right: 2%;
+    padding-left: 2%; }
+
+  .moveUp {
+    margin-top: 0%; } }

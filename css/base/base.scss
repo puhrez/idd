@@ -10,16 +10,43 @@ img {
 }
 em {
   font-style: italic;
+  font-size: 1.25em;
+
 }
-nav li {
-  //display: inline-block;
+nav > ul {
+  z-index: 2;
+}
+nav ul li {
   border: 0.1em solid black;
+  list-style-type: none;
+  position: relative;
   text-align: left;
   font-size: 2em;
   height: 1.75em;
+  background-color: white;
+    ul {
+    -webkit-transition: transform 0.2s linear 25ms;
+    -moz-transition: transform 0.2s linear 25ms;
+    -ms-transition: transform 0.2s linear 25ms;
+    transition: transform 0.2s linear 25ms;
+      position: absolute;
+            z-index: -1;
+            top: 0%;
+      li {
+        overflow: hidden;
+        background-color: white;
+        font-size: 0.7em;
+        max-width: 175%;
+      }
+    }
   }
+nav li:hover ul, .expose {
+    transform: translate(-100%,-100%); 
+    z-index: -2;
+  }
+
 a {
-    color: black;
+    color: black; 
   text-decoration: none;
   &:hover {
     color: blue;
@@ -28,40 +55,45 @@ a {
 ul li{
   line-height: 200%;
 }
-article {
-  h1 {
-    font-size: 2em;
-    line-height: 250%;
-    a{
-      text-decoration: none;
-      color: black;
+section {
+  background-color: #FFFF99;
+  color: black;
+  article {
+    h1 {
+      font-size: 2em;
+      line-height: 250%;
+      font-weight: bold;
+      a{
+        text-decoration: none;
+      }
     }
-  }
-  h2 {
-    font-size: 1.5em;
-    line-height: 150%;
-  }
-  h5 {
-    font-size: 1.25em;
-    line-height: 150%;
-  }
-  p {
-  font-size: 1em;
-  text-indent: 1em;
-  text-align: left;
-  margin-left: 10%;
-  margin-right: 10%;
-  line-height: 150%;
-  }
-  li {
+    h2 {
+      font-size: 1.5em;
+      line-height: 150%;
+    }
+    h5 {
+      font-size: 1.25em;
+      line-height: 150%;
+    }
+    p {
+    font-size: 1em;
+    text-indent: 1em;
     text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
-    text-decoration: underline;
-  }
-  li + p {
-    font-size: 0.75em;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 150%;
+    }
+    ul > li {
+      text-align: left;
+      margin-left: 20%;
+      margin-right: 20%;
+      text-decoration: underline;
+      font-size: 1.1em;
+    }
+    li + p {
+      font-size: 0.75em;
+      margin-left: 30%;
+      margin-right: 30%;
+    }
   }
 }

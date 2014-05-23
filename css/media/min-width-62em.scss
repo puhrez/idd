@@ -3,13 +3,27 @@
     ul.address {display:none;}
   }
 nav {
+  margin-top: 20%;
   a {
     font-size: 1.5em;
   }
   background-color: black;
 }
+
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
 nav li{
   background-color: white;
-  display: inline-block;
   font-size: 1.5em;
+}
+.mainNav li {
+  text-align: center;
+}
+
+.moveUp {
+  margin-top: 0%;
 }

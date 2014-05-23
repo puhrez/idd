@@ -93,7 +93,8 @@ nav li:hover ul, .expose {
 
 a {
   color: black;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-right: 10%; }
   a:hover {
     color: blue; }
 
