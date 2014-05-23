@@ -12,14 +12,15 @@
     })
     .done(function(html) {
       history.pushState(null, null, page);
-      $(".container").html(html);
-      $(".mainNav").addClass("moveUp");
-      $(".container").fadeIn("slow");
+      $container = $(".container");
+      $container.html(html);
+      $('html, body').animate({scrollTop: $container.offset().top}, 750);
+      $container.fadeIn("slow");
       $("a[href='index.html']").on("click",function(event) {
         event.preventDefault();
-        $(".mainNav").removeClass("moveUp");
+        $('html, body').animate({scrollTop: 0}, 750);
         history.pushState(null, null, "index.html");
-        $(".container").fadeOut("slow");
+        $container.fadeOut("slow");
     });
       if (is_touch_device) {
         $(".secondNav li").on("click", function() {
@@ -29,7 +30,7 @@
     });
   }
   $(document).ready(function() {
-    var $navItems = $(".mainNav");
+    var $navItems = $(".mainNav a");
     $navItems.on("click", function(event) {
       event.preventDefault();
       var requestPage = $(event.target).attr("href")
